@@ -490,44 +490,447 @@ h3 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    .resume-container {
+        max-width: 1400px;
+        margin: 3rem auto;
+    }
+    
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .project-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large Devices (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .resume-container {
+        margin: 2rem auto;
+    }
+    
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-info ul {
+        gap: 2rem;
+    }
+}
+
+/* Medium Devices (768px to 991px) */
+@media (max-width: 991px) {
+    .resume-container {
+        margin: 1.5rem auto;
+        border-radius: 15px;
+    }
+    
+    .resume-header {
+        padding: 3rem 1.5rem;
+    }
+    
+    .resume-header h1 {
+        font-size: 2.8rem;
+    }
+    
+    .resume-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin: 2rem 0.5rem;
+    }
+    
+    .skill-item {
+        min-width: auto;
+        padding: 1.5rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-item {
+        padding: 1.3rem 1.5rem;
+    }
+    
+    .timeline-item::before {
+        left: -2rem;
+        top: 1.5rem;
+    }
+    
+    .timeline-item::after {
+        left: -1.2rem;
+        top: 1.8rem;
+        width: 1.2rem;
+    }
+    
+    .personal-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .resume-section {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+/* Small Devices (576px to 767px) */
+@media (max-width: 767px) {
+    .resume-container {
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+    
+    .resume-header {
+        padding: 2.5rem 1rem;
+    }
+    
     .resume-header h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
-
+    
     .resume-header h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-
+    
     .contact-info ul {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        text-align: center;
     }
-
-    .resume-section {
-        padding: 2rem 1rem;
+    
+    .contact-info li {
+        justify-content: center;
+        font-size: 0.9rem;
     }
-
-    .section-title {
-        font-size: 1.8rem;
+    
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
     }
-
-    .timeline {
-        padding-left: 2rem;
+    
+    .skill-item {
+        min-width: auto;
+        padding: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
-
-    .timeline-item {
+    
+    .skill-item h4 {
+        font-size: 1rem;
+        white-space: normal;
+    }
+    
+    .skill-item i {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .project-card {
         padding: 1.2rem;
     }
-
-    .timeline-item::before {
-        left: -2rem;
+    
+    .timeline {
+        padding-left: 1.5rem;
     }
-
+    
+    .timeline-item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-item::before {
+        left: -1.5rem;
+        top: 1rem;
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+    
     .timeline-item::after {
+        left: -0.8rem;
+        top: 1.2rem;
+        width: 0.8rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-company {
+        font-size: 1rem;
+    }
+    
+    .timeline-date {
+        font-size: 0.85rem;
+    }
+    
+    .personal-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .detail-item {
+        padding: 1rem;
+    }
+    
+    .education-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .resume-section {
+        padding: 2rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Extra Small Devices (480px and below) */
+@media (max-width: 480px) {
+    .resume-container {
+        margin: 0.5rem auto;
+        border-radius: 8px;
+    }
+    
+    .resume-header {
+        padding: 2rem 0.8rem;
+    }
+    
+    .resume-header h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+    
+    .resume-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info ul {
+        gap: 0.8rem;
+    }
+    
+    .contact-info li {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .contact-info i {
+        font-size: 1rem;
+    }
+    
+    .skills-list {
+        gap: 0.8rem;
+        margin: 1rem 0;
+    }
+    
+    .skill-item {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .skill-item h4 {
+        font-size: 0.95rem;
+        justify-content: center;
+    }
+    
+    .skill-item i {
+        font-size: 1rem;
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .project-platform {
+        font-size: 0.9rem;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+    }
+    
+    .timeline {
+        padding-left: 1.2rem;
+    }
+    
+    .timeline-item {
+        padding: 0.8rem;
+    }
+    
+    .timeline-item::before {
         left: -1.2rem;
-        width: 1.2rem;
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    
+    .timeline-item::after {
+        left: -0.6rem;
+        width: 0.6rem;
+    }
+    
+    .timeline-description li {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+    
+    .resume-section {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .education-item {
+        padding: 0.8rem;
+    }
+    
+    .education-title {
+        font-size: 1rem;
+    }
+    
+    .education-school {
+        font-size: 0.9rem;
+    }
+    
+    .education-year {
+        font-size: 0.85rem;
+    }
+}
+
+/* Ultra Small Devices (360px and below) */
+@media (max-width: 360px) {
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+    
+    .resume-header h2 {
+        font-size: 1rem;
+    }
+    
+    .contact-info li {
+        font-size: 0.8rem;
+    }
+    
+    .skill-item h4 {
+        font-size: 0.9rem;
+    }
+    
+    .project-card h4 {
+        font-size: 1rem;
+    }
+    
+    .timeline-title {
+        font-size: 1rem;
+    }
+    
+    .timeline-company {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Landscape Orientation Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .resume-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+    
+    .resume-header h2 {
+        font-size: 1rem;
+    }
+    
+    .contact-info ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .resume-section {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* High DPI/Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .timeline::before {
+        width: 2px;
+    }
+    
+    .timeline-item::before {
+        border-width: 2px;
+    }
+    
+    .skill-item,
+    .project-card,
+    .timeline-item {
+        border-width: 0.5px;
+    }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    .skill-item:hover,
+    .project-card:hover,
+    .timeline-item:hover,
+    .detail-item:hover,
+    .education-item:hover {
+        transform: none;
+    }
+    
+    .skill-item:active,
+    .project-card:active,
+    .timeline-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
     }
 }
 
